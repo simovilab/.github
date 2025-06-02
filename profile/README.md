@@ -24,3 +24,67 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 
 - **Databús**: plataforma para coleta, criação e distribuição de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
 - **Infobús**: plataforma de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
+
+## Sistema
+
+```mermaid
+flowchart TD
+    subgraph Databús
+        subgraph Vehículo
+            OPE@{ shape: manual, label: "Conductor"}
+            SEN@{ shape: event, label: "Otros sensores"}
+            OBE[Aplicación móvil]
+        end
+        subgraph Operaciones
+            GTFS[Editor GTFS]
+            DCMS[Gestor de contenidos]
+            DAT((Servidor Databús))
+        end
+    end
+
+    SC@{ shape: docs, label: "GTFS Schedule"}
+    RT@{ shape: doc, label: "GTFS Realtime"}
+    ADM@{ shape: manual, label: "Administración"}
+
+    subgraph Infobús
+        subgraph Contenidos
+            INF((Servidor Infobús))
+            ICMS[Gestor de contenidos]
+            MCP[Servidor MCP]
+        end
+        subgraph Interfaces
+            WEB[Sitio web]
+            APP[Aplicación móvil]
+            SSC[Servidor de pantallas]
+
+            ANA[Análisis de datos]
+        end
+        SCR@{ shape: display, label: "Pantallas"}
+    end
+
+    PAS@{ shape: terminal, label: "Pasajero"}
+    RES@{ shape: terminal, label: "Investigador"}
+
+OPE --> OBE
+SEN --> OBE
+Vehículo <--API--> Operaciones
+DAT --> RT
+DAT --> SC
+
+RT --> INF
+SC --> INF
+
+Contenidos <--API--> Interfaces
+
+SSC --> SCR
+
+WEB --> PAS
+APP --> PAS
+SCR --> PAS
+
+ANA ---> RES
+
+Operaciones <--> ADM
+ADM <--> Contenidos
+
+```
