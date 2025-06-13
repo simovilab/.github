@@ -103,6 +103,9 @@ ADM <--> Contenidos
 
 ### Databús
 
+> [!NOTE]
+> Databús&reg; es una marca registrada de la Universidad de Costa Rica.
+
 #### Servidor
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus-005DA4?logo=github)](https://github.com/simovilab/databus)
@@ -139,6 +142,9 @@ Editor de datos estáticos del servicio de transporte público, compatible con e
 Aplicación móvil operativa para la recolección de datos de rastreo y telemetría de los vehículos de transporte público. Permite a los conductores registrar eventos, como el inicio y fin de recorridos, alertas, y otros datos relevantes.
 
 ### Infobús
+
+> [!NOTE]
+> Infobús&reg; es una marca registrada de la Universidad de Costa Rica.
 
 #### Servidor
 
