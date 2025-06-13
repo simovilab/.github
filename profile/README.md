@@ -99,14 +99,12 @@ ADM <--> Contenidos
 
 ```
 
-## Subsistemas
-
-### Databús
+## Databús
 
 > [!NOTE]
 > Databús&reg; es una marca registrada de la Universidad de Costa Rica.
 
-#### Servidor
+### Servidor
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus-005DA4?logo=github)](https://github.com/simovilab/databus)
 ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
@@ -114,7 +112,7 @@ ADM <--> Contenidos
 
 Servidor de recolección, creación y distribución de datos del servicio de transporte público. Permite la gestión y distribución de datos estáticos (GTFS _Schedule_) y en tiempo real (GTFS _Realtime_). Expone una API REST.
 
-#### Panel de administración
+### Panel de administración
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--admin-005DA4?logo=github)
 ](https://github.com/simovilab/databus-admin)
@@ -123,7 +121,7 @@ Servidor de recolección, creación y distribución de datos del servicio de tra
 
 Interfaz de administración del servidor Databús. Permite la gestión de datos estáticos y en tiempo real, así como la configuración del sistema.
 
-#### Editor GTFS
+### Editor GTFS
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--editor-005DA4?logo=github)
 ](https://github.com/simovilab/databus-editor)
@@ -132,7 +130,7 @@ Interfaz de administración del servidor Databús. Permite la gestión de datos 
 
 Editor de datos estáticos del servicio de transporte público, compatible con el formato **GTFS** _Schedule_. Permite la creación y edición de rutas, paradas, horarios y otros datos relevantes.
 
-#### Aplicación móvil operativa
+### Aplicación móvil operativa
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--app-005DA4?logo=github)
 ](https://github.com/simovilab/databus-app)
@@ -141,12 +139,12 @@ Editor de datos estáticos del servicio de transporte público, compatible con e
 
 Aplicación móvil operativa para la recolección de datos de rastreo y telemetría de los vehículos de transporte público. Permite a los conductores registrar eventos, como el inicio y fin de recorridos, alertas, y otros datos relevantes.
 
-### Infobús
+## Infobús
 
 > [!NOTE]
 > Infobús&reg; es una marca registrada de la Universidad de Costa Rica.
 
-#### Servidor
+### Servidor
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus-005DA4?logo=github)](https://github.com/simovilab/infobus)
 ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
@@ -154,7 +152,7 @@ Aplicación móvil operativa para la recolección de datos de rastreo y telemetr
 
 Servidor de distribución de información del servicio de transporte público. Permite la gestión y distribución de contenidos para diferentes interfaces, como sitios web, aplicaciones móviles y pantallas.
 
-#### Gestor de contenidos
+### Gestor de contenidos
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--cms-005DA4?logo=github)](https://github.com/simovilab/infobus-cms)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
@@ -162,7 +160,7 @@ Servidor de distribución de información del servicio de transporte público. P
 
 Gestor de contenidos para el servidor Infobús. Permite la creación y edición de contenidos, como noticias, alertas, y otros datos relevantes para las personas usuarias del servicio.
 
-#### Servidor MCP
+### Servidor MCP
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--mcp-005DA4?logo=github)](https://github.com/simovilab/infobus-mcp)
 ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
@@ -170,7 +168,7 @@ Gestor de contenidos para el servidor Infobús. Permite la creación y edición 
 
 Servidor MCP (_Model Context Protocol_) para la interacción de agentes de inteligencia artificial (IA) con la API de Infobús, con aplicación en chats con modelos extensos de lenguaje (LLMs) y otros sistemas de IA.
 
-#### Sitio web
+### Sitio web
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--web-005DA4?logo=github)](https://github.com/simovilab/infobus-web)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
@@ -178,7 +176,7 @@ Servidor MCP (_Model Context Protocol_) para la interacción de agentes de intel
 
 Sitio web para la consulta de información del servicio de transporte público. Permite a las personas usuarias consultar rutas, horarios, alertas y otros datos relevantes.
 
-#### Servidor de pantallas
+### Servidor de pantallas
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--screens-005DA4?logo=github)](https://github.com/simovilab/infobus-screens)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
@@ -186,7 +184,7 @@ Sitio web para la consulta de información del servicio de transporte público. 
 
 Servidor de distribución de contenidos para pantallas informativas. Permite la gestión y distribución de contenidos específicos para pantallas ubicadas en paradas, vehículos y otros puntos estratégicos.
 
-#### Aplicación móvil
+### Aplicación móvil
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--app-005DA4?logo=github)](https://github.com/simovilab/infobus-app)
 ![Static Badge](https://img.shields.io/badge/TRL-1-FF0000)
@@ -194,10 +192,13 @@ Servidor de distribución de contenidos para pantallas informativas. Permite la 
 
 Aplicación móvil para la consulta de información del servicio de transporte público. Permite a las personas usuarias consultar rutas, horarios, alertas y otros datos relevantes desde sus dispositivos móviles.
 
-#### Panel de análisis de datos
+### Panel de análisis de datos
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--data-005DA4?logo=github)](https://github.com/simovilab/infobus-data)
 ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
 ![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
 
 Panel para el análisis de datos del servicio de transporte público. Permite a investigadores y analistas consultar y visualizar datos históricos y en tiempo real del servicio, facilitando la toma de decisiones informadas.
+
+> [!NOTE]
+> TRL es un acrónimo de **Technology Readiness Level** (_Nivel de madurez tecnológica_). Los niveles van del 1 al 9, donde 1 indica una investigación básica y 9 indica que la tecnología está completamente probada y lista para su uso en producción. Puede consultar la [escala aplicada](../TRL.md).

@@ -1,51 +1,51 @@
 # Niveles de madurez tecnológica
 
-1
+1. Principios básicos observados (algoritmo o concepto novedoso)
 
-![Static Badge](https://img.shields.io/badge/TRL-1-FF0000)
+   ![Static Badge](https://img.shields.io/badge/TRL-1-FF0000)
 
-2
+2. Concepto formulado (arquitectura definida)
 
-![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
+   ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 
-3
+3. Prueba de concepto implementada (código de demostración, prototipo)
 
-![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
+   ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
 
-4
+4. Validación inicial (prototipo funcional básico)
 
-![Static Badge](https://img.shields.io/badge/TRL-4-FFCC00)
+   ![Static Badge](https://img.shields.io/badge/TRL-4-FFCC00)
 
-5
+5. Validado en entorno simulado (implementación inicial, versión alfa)
 
-![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
+   ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
 
-6
+6. Demostrado en entorno relevante (versión beta con usuarios reales)
 
-![Static Badge](https://img.shields.io/badge/TRL-6-CCFF00)
+   ![Static Badge](https://img.shields.io/badge/TRL-6-CCFF00)
 
-7
+7. Prototipo del sistema en entorno operacional
 
-![Static Badge](https://img.shields.io/badge/TRL-7-88FF00)
+   ![Static Badge](https://img.shields.io/badge/TRL-7-88FF00)
 
-8
+8. Sistema completo y calificado
 
-![Static Badge](https://img.shields.io/badge/TRL-8-44FF00)
+   ![Static Badge](https://img.shields.io/badge/TRL-8-44FF00)
 
-9
+9. Uso operacional y rendimiento sostenido
 
-![Static Badge](https://img.shields.io/badge/TRL-9-00FF00)
+   ![Static Badge](https://img.shields.io/badge/TRL-9-00FF00)
 
 ## Prioridad de desarrollo
 
-Baja
+- Baja
 
-![Static Badge](https://img.shields.io/badge/Prioridad-baja-555555)
+  ![Static Badge](https://img.shields.io/badge/Prioridad-baja-555555)
 
-Media
+- Media
 
-![Static Badge](https://img.shields.io/badge/Prioridad-media-AAAAAA)
+  ![Static Badge](https://img.shields.io/badge/Prioridad-media-AAAAAA)
 
-Alta
+- Alta
 
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+  ![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
