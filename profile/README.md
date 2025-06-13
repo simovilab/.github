@@ -37,7 +37,7 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
       'primaryBorderColor': '#005DA4',
       'lineColor': '#005DA4',
       'secondaryColor': '#005DA4',
-      'tertiaryColor': '#BBBBBB'
+      'tertiaryColor': '#DDDDDD'
     }
   }
 }%%
