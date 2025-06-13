@@ -28,7 +28,19 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 ## Sistema
 
 ```mermaid
-%%{init: {'theme':'forest'}}%%
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#00C0F3',
+      'primaryTextColor': '#fff',
+      'primaryBorderColor': '#005DA4',
+      'lineColor': '#005DA4',
+      'secondaryColor': '#005DA4',
+      'tertiaryColor': '#BBBBBB'
+    }
+  }
+}%%
 flowchart TD
     subgraph Databús
         subgraph Vehículo
