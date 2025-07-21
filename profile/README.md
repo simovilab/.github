@@ -2,14 +2,16 @@
 
 Escuela de Ingeniería Eléctrica | **Universidad de Costa Rica**
 
+Please check the [SIMOVI Roadmap Overview](https://github.com/simovilab/.github/blob/main/ROADMAP.md) (in English) to collaborate with our laboratory!
+
 [🇨🇷 Español](#nuestro-trabajo) | [🇺🇸 English](#our-work) | [🇧🇷 Português](#nosso-trabalho)
 
 ## Nuestro trabajo
 
 Investigamos tecnologías para el análisis de datos del transporte público, con énfasis en sistemas de información para las personas usuarias. Actualmente desarrollamos dos sistemas complementarios:
 
-- **Databús**: plataforma de recolección, creación y distribución de datos del servicio de transporte público, tanto la información estática de rutas, horarios, mapas y otros, como alertas y la información en tiempo real de los vehículos.
-- **Infobús**: plataforma de distribución de información del servicio para las personas usuarias del servicio de buses. Incluye múltiples medios digitales, como pantallas, sitios web y otros componentes para el uso de los datos del servicio.
+- **Databús**: una plataforma de _recolección_, _creación_ y _distribución_ de datos del servicio de transporte público, tanto la información estática de rutas, horarios, mapas y otros, como alertas y la información en tiempo real de los vehículos.
+- **Infobús**: una plataforma de _distribución_ de información del servicio para las personas usuarias del servicio de buses. Incluye múltiples medios digitales, como pantallas, sitios web y otros componentes para el uso de los datos del servicio.
 
 ## Our work
 
@@ -22,8 +24,8 @@ We investigate technologies for the analysis of public transportation data, with
 
 Investigamos tecnologias para a análise de dados do transporte público, com ênfase em sistemas de informação para as pessoas usuárias. Atualmente, estamos desenvolvendo dois sistemas complementares:
 
-- **Databús**: plataforma para coleta, criação e distribuição de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
-- **Infobús**: plataforma de distribuição de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
+- **Databús**: uma plataforma para _coleta_, _criação_ e _distribuição_ de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
+- **Infobús**: uma plataforma de _distribuição_ de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
 
 ## Sistema
 
@@ -130,6 +132,24 @@ Interfaz de administración del servidor Databús. Permite la gestión de datos 
 
 Editor de datos estáticos del servicio de transporte público, compatible con el formato **GTFS** _Schedule_. Permite la creación y edición de rutas, paradas, horarios y otros datos relevantes.
 
+### Paquete de Python
+
+[![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--py-005DA4?logo=github)
+](https://github.com/simovilab/databus-py)
+![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
+![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+
+Paquete de utilidades y herramientas y CLI (interfaz de línea de comandos) de Python para interactuar con el ecosistema de Databús y sus datos.
+
+### Orquestador de flujo de datos
+
+[![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--airflow-005DA4?logo=github)
+](https://github.com/simovilab/databus-airflow)
+![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
+![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+
+Plataforma de gestión del flujo de datos para análisis y procesamiento en tiempo real.
+
 ### Aplicación móvil operativa
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--app-005DA4?logo=github)
@@ -167,6 +187,15 @@ Gestor de contenidos para el servidor Infobús. Permite la creación y edición 
 ![Static Badge](https://img.shields.io/badge/Prioridad-media-AAAAAA)
 
 Servidor MCP (_Model Context Protocol_) para la interacción de agentes de inteligencia artificial (IA) con la API de Infobús, con aplicación en chats con modelos extensos de lenguaje (LLMs) y otros sistemas de IA.
+
+### Paquete de Python
+
+[![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--py-005DA4?logo=github)
+](https://github.com/simovilab/infobus-py)
+![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
+![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+
+Paquete de utilidades y herramientas y CLI (interfaz de línea de comandos) de Python para interactuar con el ecosistema de Infobús y sus datos.
 
 ### Sitio web
 
