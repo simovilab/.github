@@ -27,7 +27,8 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 - **Databús**: uma plataforma para _coleta_, _criação_ e _distribuição_ de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
 - **Infobús**: uma plataforma de _distribuição_ de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
 
-> [!IMPORTANT] > **Language Policy**: Most of our documentation is in English to support collaboration with developers around the world and to foster international partnerships in transportation research. Whenever possible, documentation in Spanish and Portuguese will also be made available for audiences in Ibero-America.
+> [!IMPORTANT]
+> **Language Policy**: Most of our documentation is in English to support collaboration with developers around the world and to foster international partnerships in transportation research. Whenever possible, documentation in Spanish and Portuguese will also be made available for audiences in Ibero-America.
 >
 > **Política de idiomas**: La mayoría de nuestra documentación está en inglés para apoyar la colaboración con desarrolladores de todo el mundo y fomentar las asociaciones internacionales en investigación del transporte público. Siempre que sea posible, también estará a disposición la documentación en español y portugués para audiencias en Iberoamérica.
 >
@@ -35,7 +36,8 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 
 ## System
 
-> [!IMPORTANT] > **Documentation of this section in other languages**:
+> [!IMPORTANT]
+> **Documentation of this section in other languages**:
 >
 > - 🇨🇷 **Spanish version**: Available in [SISTEMAS_ES.md](SISTEMAS_ES.md)
 > - 🇧🇷 **Portuguese version**: Available in [SISTEMAS_PT.md](SISTEMAS_PT.md)
