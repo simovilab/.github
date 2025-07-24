@@ -1,0 +1,189 @@
+name: Documentation Issue
+description: Report problems or suggest improvements for documentation
+title: "[Docs]: "
+labels: ["documentation", "improvement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us improve our documentation! Clear documentation is essential for advancing intelligent mobility systems research and collaboration.
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Documentation Issue Type
+      description: What type of documentation issue is this?
+      options:
+        - Missing documentation
+        - Incorrect or outdated information
+        - Unclear or confusing content
+        - Broken links or references
+        - Translation needed
+        - Code examples not working
+        - Installation/setup issues
+        - API documentation problems
+        - Tutorial or guide improvements
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: documentation-area
+    attributes:
+      label: Documentation Area
+      description: Which area of documentation needs attention?
+      options:
+        - README files
+        - API documentation
+        - Installation guides
+        - User guides/tutorials
+        - Developer documentation
+        - System architecture
+        - GTFS documentation
+        - Research papers/publications
+        - Code comments
+        - Configuration guides
+        - Troubleshooting guides
+        - Contributing guidelines
+        - Roadmap documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: system-component
+    attributes:
+      label: Related System Component
+      description: Which SIMOVI system is this documentation related to?
+      options:
+        - Databús (data collection and distribution)
+        - Infobús (information distribution)
+        - Mobile applications
+        - Web interfaces
+        - API services
+        - Data analysis tools
+        - GTFS tools
+        - Cross-system integration
+        - General/organizational
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: documentation-location
+    attributes:
+      label: Documentation Location
+      description: Where is this documentation located? (URL, file path, or repository)
+      placeholder: "e.g., https://github.com/simovilab/databus/README.md, /docs/api/endpoints.md"
+
+  - type: textarea
+    id: current-problem
+    attributes:
+      label: Current Problem
+      description: Describe what's wrong with the current documentation or what's missing.
+      placeholder: "The current documentation is unclear because... / This section is missing information about... / The examples don't work because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed Improvement
+      description: How should the documentation be improved?
+      placeholder: "The documentation should include... / This section needs to explain... / Add examples showing..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      options:
+        - End users (passengers, transit users)
+        - Transit operators/agencies
+        - Researchers and academics
+        - Developers and integrators
+        - System administrators
+        - Contributors to the project
+        - Transportation industry professionals
+        - Students and educators
+        - All audiences
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: What language should this documentation be in?
+      options:
+        - English (primary)
+        - Spanish (Español)
+        - Portuguese (Português)
+        - Multiple languages needed
+        - Other language needed
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-context
+    attributes:
+      label: Technical Context
+      description: Any specific technical details, standards, or concepts that should be covered?
+      placeholder: "This documentation should cover GTFS standards, API endpoints, installation requirements, etc."
+
+  - type: textarea
+    id: examples-needed
+    attributes:
+      label: Examples or Code Samples Needed
+      description: What specific examples, code samples, or screenshots would be helpful?
+      placeholder: "Include examples of API calls, configuration files, usage scenarios, etc."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is fixing this documentation issue?
+      options:
+        - Low - Minor improvement
+        - Medium - Affects user experience
+        - High - Important for adoption/understanding
+        - Critical - Blocking users or research
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, references, or related documentation that would be helpful?
+      placeholder: "Links to related documentation, standards references, user feedback, etc."
+
+  - type: checkboxes
+    id: contribution-interest
+    attributes:
+      label: Contribution Interest
+      description: Are you interested in helping with this documentation?
+      options:
+        - label: I would be willing to help write or review this documentation
+          required: false
+        - label: I can provide technical expertise on this topic
+          required: false
+        - label: I can help with translation to Spanish or Portuguese
+          required: false
+
+  - type: checkboxes
+    id: documentation-guidelines
+    attributes:
+      label: Documentation Guidelines
+      description: Please confirm you've considered the following
+      options:
+        - label: I have checked if this documentation issue already exists
+          required: true
+        - label: I understand this documentation should align with SIMOVI's research mission
+          required: true
+        - label: I have considered the multilingual documentation policy (English primary, Spanish/Portuguese when possible)
+          required: true
