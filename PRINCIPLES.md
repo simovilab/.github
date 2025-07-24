@@ -1,8 +1,8 @@
-# Design Principles
+# System Design Principles
 
 The SIMOVI laboratory operates under a comprehensive framework of design principles that guide our research and development activities in intelligent mobility systems.
 
-Some of these principles are derived from our published research, particularly the article "A System-Level Design for a Public Transportation Information System in Costa Rica" ([DOI](https://doi.org/10.1109/CONCAPAN63470.2024.10933847)). We also adhere to the Mobility Data Interoperability Principles ([MDIP](https://www.interoperablemobility.org/)), the [MACH](https://machalliance.org/mach-principles) Principles and the [TransitOPS](https://transitops.co/manifesto.html) Manifesto, which are also oriented towards creating sustainable, accessible, and interoperable transportation information and data analysis systems.
+Some of these principles are derived from our published research, particularly the article "A System-Level Design for a Public Transportation Information System in Costa Rica" ([IEEE Xplore](https://doi.org/10.1109/CONCAPAN63470.2024.10933847)). We also adhere to the Mobility Data Interoperability Principles ([MDIP](https://www.interoperablemobility.org/)), the [MACH](https://machalliance.org/mach-principles) Principles and the [TransitOPS](https://transitops.co/manifesto.html) Manifesto, which are all oriented towards creating sustainable, accessible, and interoperable transportation information and data analysis systems.
 
 ## SIMOVI Principles
 
@@ -83,7 +83,7 @@ These principles serve as the foundation for all SIMOVI projects and provide gui
 > [!NOTE]
 > Copyright © 2024 MDIP Coalition. All Rights Reserved.
 
-From [https://www.interoperablemobility.org/](https://www.interoperablemobility.org/):
+From [interoperablemobility.org/](https://www.interoperablemobility.org/):
 
 > Transit is a high-tech industry. Mobility service providers need tech components that are capable of working together in real time using standard formats.
 
@@ -98,7 +98,7 @@ From [https://www.interoperablemobility.org/](https://www.interoperablemobility.
 > [!NOTE]
 > Copyright © 2023 TransitOPS. All Rights Reserved.
 
-From [https://transitops.co/manifesto.html](https://transitops.co/manifesto.html):
+From [transitops.co/manifesto](https://transitops.co/manifesto.html):
 
 > The transit technology status quo is an obstacle to achieving equity and the standard of service that riders deserve. While locked into the current proprietary monolith vendor marketplace, public transit agencies can not easily achieve parity with other mobility providers. Therefore, TransitOPS was founded to build, promote, expand, and support open-source software solutions at every level of the transit technology stack to drive modernization while reducing cost, improving public transit experience, and making public transit itself sustainable.
 
@@ -149,7 +149,7 @@ Magnifying the public benefit aspects of public transit is an important goal, wo
 > [!NOTE]
 > Copyright © 2025 MACH Alliance. All Rights Reserved.
 
-From [https://machalliance.org/mach-principles](https://machalliance.org/mach-principles):
+From [machalliance.org/mach-principles](https://machalliance.org/mach-principles):
 
 > The MACH Principles—Composable, Connected, Incremental, Open, and Autonomous—provide a roadmap for organizations to build scalable, flexible, and collaborative digital ecosystems. By aligning technology with these principles, businesses can drive continuous improvement and adapt seamlessly to change.
 
