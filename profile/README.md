@@ -35,6 +35,23 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 
 ## System
 
+> [!IMPORTANT] > **Documentation of this section in other languages**:
+>
+> - 🇨🇷 **Spanish version**: Available in [SISTEMAS_ES.md](SISTEMAS_ES.md)
+> - 🇧🇷 **Portuguese version**: Available in [SISTEMAS_PT.md](SISTEMAS_PT.md)
+>
+> **Documentación de esta sección en otros idiomas**:
+>
+> - 🇨🇷 **Versión en español**: Disponible en [SISTEMAS_ES.md](SISTEMAS_ES.md)
+> - 🇧🇷 **Versión en portugués**: Disponible en [SISTEMAS_PT.md](SISTEMAS_PT.md)
+>
+> **Documentação dessa parte em outros idiomas**:
+>
+> - 🇨🇷 **Versão em espanhol**: Disponível em [SISTEMAS_ES.md](SISTEMAS_ES.md)
+> - 🇧🇷 **Versão em português**: Disponível em [SISTEMAS_PT.md](SISTEMAS_PT.md)
+
+The following technological architecture diagram illustrates the core components and data flows of our research and development ecosystem.
+
 ```mermaid
 %%{
   init: {

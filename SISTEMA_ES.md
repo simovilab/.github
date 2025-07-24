@@ -1,5 +1,7 @@
 # Sistema
 
+El siguiente diagrama de arquitectura tecnológica ilustra los componentes principales y los flujos de datos de nuestro ecosistema de investigación y desarrollo.
+
 ```mermaid
 %%{
   init: {
