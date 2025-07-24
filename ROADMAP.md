@@ -4,15 +4,21 @@
 
 This document outlines our approach to the [SIMOVI Roadmap](https://github.com/orgs/simovilab/projects/2). Here, you'll find our guiding principles and a breakdown of the key areas we are focused on for development. Our roadmap is not a static list but a dynamic set of priorities that are tracked live in our GitHub Issues.
 
+> [!NOTE]
+> This document is heavily influenced by the [Google Gemini CLI](https://github.com/orgs/google-gemini/projects/11/views/21) project's roadmap.
+
 All repositories are [Apache 2.0 open source projects](https://www.apache.org/licenses/LICENSE-2.0), so we appreciate and welcome public contributions in the corresponding repositories, and will give first priority to those contributions aligned with our roadmap and research interests. If you want to propose a new feature or change to our roadmap, please start by opening an issue for discussion.
 
 ## Disclaimer
 
 This roadmap represents our current thinking and is for informational purposes only. It is not a commitment or a guarantee of future delivery. The development, release, and timing of any features are subject to change, and we may update the roadmap based on internal discussions, previous commitments as well as when our priorities evolve.
 
-## Guiding Principles
+## Design Principles
 
-Our development is guided by the following principles:
+> [!NOTE]
+> Please check all design principles in its [main page](PRINCIPLES.md).
+
+Our development is by several principles, which can be summarized as follows:
 
 - **Standard-based:** All architectural and data decisions are backed up by international references, specifications or standards in the field. If no reference exists, an effort will be made to create one that follows as much as possible other similar
 - **Interoperability:** As a system-of-systems, an intelligent transportation system must ensure on every step its capability to work alongside other implementations through appropriate interfaces and data schemas.
