@@ -27,7 +27,13 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 - **Databús**: uma plataforma para _coleta_, _criação_ e _distribuição_ de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
 - **Infobús**: uma plataforma de _distribuição_ de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
 
-## Sistema
+> [!IMPORTANT] > **Language Policy**: Most of our documentation is in English to support collaboration with developers around the world and to foster international partnerships in transportation research. Whenever possible, documentation in Spanish and Portuguese will also be made available for audiences in Ibero-America.
+>
+> **Política de idiomas**: La mayoría de nuestra documentación está en inglés para apoyar la colaboración con desarrolladores de todo el mundo y fomentar las asociaciones internacionales en investigación del transporte público. Siempre que sea posible, también estará a disposición la documentación en español y portugués para audiencias en Iberoamérica.
+>
+> **Política de idiomas**: A maioria da nossa documentação está em inglês para apoiar a colaboração com desenvolvedores de todo o mundo e promover parcerias internacionais em pesquisa de transporte público. Sempre que possível, a documentação também será disponibilizada em espanhol e português para audiências na Ibero-América.
+
+## System
 
 ```mermaid
 %%{
@@ -45,50 +51,50 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 }%%
 flowchart TD
     subgraph Databús
-        subgraph Vehículo
-            OPE@{ shape: manual, label: "Conductor"}
-            SEN@{ shape: event, label: "Otros sensores"}
-            OBE[Aplicación móvil]
+        subgraph Vehicle
+            OPE@{ shape: manual, label: "Driver"}
+            SEN@{ shape: event, label: "Other sensors"}
+            OBE[Mobile app]
         end
-        subgraph Operaciones
-            GTFS[Editor GTFS]
-            DCMS[Panel de administración]
-            DAT((Servidor Databús))
+        subgraph Operations
+            GTFS[GTFS Editor]
+            DCMS[Administration panel]
+            DAT((Databús Server))
         end
     end
 
     SC@{ shape: docs, label: "GTFS Schedule"}
     RT@{ shape: doc, label: "GTFS Realtime"}
-    ADM@{ shape: manual, label: "Administración"}
+    ADM@{ shape: manual, label: "Administration"}
 
     subgraph Infobús
-        subgraph Contenidos
-            INF((Servidor Infobús))
-            ICMS[Gestor de contenidos]
-            MCP[Servidor MCP]
+        subgraph Content
+            INF((Infobús Server))
+            ICMS[Content manager]
+            MCP[MCP Server]
         end
         subgraph Interfaces
-            WEB[Sitio web]
-            SSC[Servidor de pantallas]
-            APP[Aplicación móvil]
-            ANA[Análisis de datos]
+            WEB[Website]
+            SSC[Screen server]
+            APP[Mobile app]
+            ANA[Data analysis]
         end
 
     end
-    SCR@{ shape: display, label: "Pantallas"}
-    PAS@{ shape: terminal, label: "Pasajero"}
-    RES@{ shape: terminal, label: "Investigador"}
+    SCR@{ shape: display, label: "Screens"}
+    PAS@{ shape: terminal, label: "Passenger"}
+    RES@{ shape: terminal, label: "Researcher"}
 
 OPE --> OBE
 SEN --> OBE
-Vehículo <--Databús API--> Operaciones
+Vehicle <--Databús API--> Operations
 DAT --> RT
 DAT --> SC
 
 RT --> INF
 SC --> INF
 
-Contenidos <--Infobús API--> Interfaces
+Content <--Infobús API--> Interfaces
 
 WEB --> PAS
 SSC --> SCR
@@ -96,138 +102,138 @@ SCR --> PAS
 APP --> PAS
 ANA ---> RES
 
-Operaciones <--> ADM
-ADM <--> Contenidos
+Operations <--> ADM
+ADM <--> Content
 
 ```
 
 ## Databús
 
 > [!NOTE]
-> Databús&reg; es una marca registrada de la Universidad de Costa Rica.
+> Databús&reg; is a registered trademark of the University of Costa Rica.
 
-### Servidor
+### Server
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus-005DA4?logo=github)](https://github.com/simovilab/databus)
 ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Servidor de recolección, creación y distribución de datos del servicio de transporte público. Permite la gestión y distribución de datos estáticos (GTFS _Schedule_) y en tiempo real (GTFS _Realtime_). Expone una API REST.
+Server for collection, creation and distribution of public transportation service data. Enables management and distribution of static data (GTFS _Schedule_) and real-time data (GTFS _Realtime_). Exposes a REST API.
 
-### Panel de administración
+### Administration panel
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--admin-005DA4?logo=github)
 ](https://github.com/simovilab/databus-admin)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-media-AAAAAA)
+![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Interfaz de administración del servidor Databús. Permite la gestión de datos estáticos y en tiempo real, así como la configuración del sistema.
+Administration interface for the Databús server. Enables management of static and real-time data, as well as system configuration.
 
-### Editor GTFS
+### GTFS Editor
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--editor-005DA4?logo=github)
 ](https://github.com/simovilab/databus-editor)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-baja-555555)
+![Static Badge](https://img.shields.io/badge/Priority-low-555555)
 
-Editor de datos estáticos del servicio de transporte público, compatible con el formato **GTFS** _Schedule_. Permite la creación y edición de rutas, paradas, horarios y otros datos relevantes.
+Editor for static public transportation service data, compatible with the **GTFS** _Schedule_ format. Enables creation and editing of routes, stops, schedules and other relevant data.
 
-### Paquete de Python
+### Python Package
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--py-005DA4?logo=github)
 ](https://github.com/simovilab/databus-py)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Paquete de utilidades y herramientas y CLI (interfaz de línea de comandos) de Python para interactuar con el ecosistema de Databús y sus datos.
+Package of utilities and tools and CLI (command line interface) for Python to interact with the Databús ecosystem and its data.
 
-### Orquestador de flujo de datos
+### Data flow orchestrator
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--airflow-005DA4?logo=github)
 ](https://github.com/simovilab/databus-airflow)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Plataforma de gestión del flujo de datos para análisis y procesamiento en tiempo real.
+Data flow management platform for real-time analysis and processing.
 
-### Aplicación móvil operativa
+### Operational mobile application
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Fdatabus--app-005DA4?logo=github)
 ](https://github.com/simovilab/databus-app)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Aplicación móvil operativa para la recolección de datos de rastreo y telemetría de los vehículos de transporte público. Permite a los conductores registrar eventos, como el inicio y fin de recorridos, alertas, y otros datos relevantes.
+Operational mobile application for collecting tracking and telemetry data from public transportation vehicles. Enables drivers to register events, such as trip start and end, alerts, and other relevant data.
 
 ## Infobús
 
 > [!NOTE]
-> Infobús&reg; es una marca registrada de la Universidad de Costa Rica.
+> Infobús&reg; is a registered trademark of the University of Costa Rica.
 
-### Servidor
+### Server
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus-005DA4?logo=github)](https://github.com/simovilab/infobus)
 ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Servidor de distribución de información del servicio de transporte público. Permite la gestión y distribución de contenidos para diferentes interfaces, como sitios web, aplicaciones móviles y pantallas.
+Server for distribution of public transportation service information. Enables management and distribution of content for different interfaces, such as websites, mobile applications and screens.
 
-### Gestor de contenidos
+### Content manager
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--cms-005DA4?logo=github)](https://github.com/simovilab/infobus-cms)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-media-AAAAAA)
+![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Gestor de contenidos para el servidor Infobús. Permite la creación y edición de contenidos, como noticias, alertas, y otros datos relevantes para las personas usuarias del servicio.
+Content management system for the Infobús server. Enables creation and editing of content, such as news, alerts, and other relevant data for service users.
 
-### Servidor MCP
+### MCP Server
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--mcp-005DA4?logo=github)](https://github.com/simovilab/infobus-mcp)
 ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
-![Static Badge](https://img.shields.io/badge/Prioridad-media-AAAAAA)
+![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Servidor MCP (_Model Context Protocol_) para la interacción de agentes de inteligencia artificial (IA) con la API de Infobús, con aplicación en chats con modelos extensos de lenguaje (LLMs) y otros sistemas de IA.
+MCP (_Model Context Protocol_) server for interaction of artificial intelligence (AI) agents with the Infobús API, with application in chats with large language models (LLMs) and other AI systems.
 
-### Paquete de Python
+### Python Package
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--py-005DA4?logo=github)
 ](https://github.com/simovilab/infobus-py)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Paquete de utilidades y herramientas y CLI (interfaz de línea de comandos) de Python para interactuar con el ecosistema de Infobús y sus datos.
+Package of utilities and tools and CLI (command line interface) for Python to interact with the Infobús ecosystem and its data.
 
-### Sitio web
+### Website
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--web-005DA4?logo=github)](https://github.com/simovilab/infobus-web)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Sitio web para la consulta de información del servicio de transporte público. Permite a las personas usuarias consultar rutas, horarios, alertas y otros datos relevantes.
+Website for querying public transportation service information. Enables users to query routes, schedules, alerts and other relevant data.
 
-### Servidor de pantallas
+### Screen server
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--screens-005DA4?logo=github)](https://github.com/simovilab/infobus-screens)
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Servidor de distribución de contenidos para pantallas informativas. Permite la gestión y distribución de contenidos específicos para pantallas ubicadas en paradas, vehículos y otros puntos estratégicos.
+Content distribution server for informational screens. Enables management and distribution of specific content for screens located at stops, vehicles and other strategic points.
 
-### Aplicación móvil
+### Mobile application
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--app-005DA4?logo=github)](https://github.com/simovilab/infobus-app)
 ![Static Badge](https://img.shields.io/badge/TRL-1-FF0000)
-![Static Badge](https://img.shields.io/badge/Prioridad-baja-555555)
+![Static Badge](https://img.shields.io/badge/Priority-low-555555)
 
-Aplicación móvil para la consulta de información del servicio de transporte público. Permite a las personas usuarias consultar rutas, horarios, alertas y otros datos relevantes desde sus dispositivos móviles.
+Mobile application for querying public transportation service information. Enables users to query routes, schedules, alerts and other relevant data from their mobile devices.
 
-### Panel de análisis de datos
+### Data analysis panel
 
 [![Static Badge](https://img.shields.io/badge/simovilab%2Finfobus--data-005DA4?logo=github)](https://github.com/simovilab/infobus-data)
 ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
-![Static Badge](https://img.shields.io/badge/Prioridad-alta-FFFFFF)
+![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Panel para el análisis de datos del servicio de transporte público. Permite a investigadores y analistas consultar y visualizar datos históricos y en tiempo real del servicio, facilitando la toma de decisiones informadas.
+Panel for analysis of public transportation service data. Enables researchers and analysts to query and visualize historical and real-time service data, facilitating informed decision-making.
 
 > [!NOTE]
-> TRL es un acrónimo de **Technology Readiness Level** (_Nivel de madurez tecnológica_). Los niveles van del 1 al 9, donde 1 indica una investigación básica y 9 indica que la tecnología está completamente probada y lista para su uso en producción. Puede consultar la [escala aplicada](../TRL.md).
+> TRL is an acronym for **Technology Readiness Level**. The levels range from 1 to 9, where 1 indicates basic research and 9 indicates that the technology is fully tested and ready for production use. You can check the [applied scale](../TRL.md).
