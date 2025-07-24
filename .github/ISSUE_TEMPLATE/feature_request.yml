@@ -1,0 +1,149 @@
+name: Feature Request
+description: Suggest an idea or enhancement for our transportation systems
+title: "[Feature]: "
+labels: ["enhancement", "feature-request"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature for our intelligent mobility systems! Your ideas help us improve transportation information systems for everyone.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: Is your feature request related to a problem? Please describe what challenge you're facing.
+      placeholder: "I'm always frustrated when... / The current system lacks... / Users need..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: A clear and concise description of what you want to happen.
+      placeholder: Describe your ideal solution...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative-solutions
+    attributes:
+      label: Alternative Solutions
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: What other approaches have you thought about?
+
+  - type: dropdown
+    id: system-component
+    attributes:
+      label: Target System Component
+      description: Which SIMOVI system would this feature primarily affect?
+      options:
+        - Databús (data collection and distribution)
+        - Infobús (information distribution)
+        - Mobile applications
+        - Web interfaces
+        - API services
+        - Data analysis tools
+        - GTFS tools
+        - Cross-system integration
+        - New system component
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: What type of feature is this?
+      options:
+        - User Interface Enhancement
+        - Data Processing/Analytics
+        - API/Integration
+        - Performance Improvement
+        - Accessibility Feature
+        - Real-time Functionality
+        - Mobile Experience
+        - Administrative Tools
+        - Documentation/Help
+        - Security Enhancement
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Primary Beneficiary
+      description: Who would primarily benefit from this feature?
+      options:
+        - Transit passengers/users
+        - Transit operators/drivers
+        - Transportation agencies
+        - Researchers/analysts
+        - Developers/integrators
+        - System administrators
+        - All users
+        - Other stakeholders
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority-level
+    attributes:
+      label: Priority Level
+      description: How important is this feature to transportation operations?
+      options:
+        - Low - Nice to have enhancement
+        - Medium - Would improve user experience
+        - High - Important for system effectiveness
+        - Critical - Essential for transportation operations
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases and Examples
+      description: Provide specific scenarios where this feature would be useful.
+      placeholder: |
+        Example scenarios:
+        1. When a passenger needs to...
+        2. When a transit operator wants to...
+        3. When analyzing transportation data...
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical aspects, standards, or constraints that should be considered?
+      placeholder: "Consider GTFS standards, real-time data requirements, mobile compatibility, etc."
+
+  - type: input
+    id: related-standards
+    attributes:
+      label: Related Standards or Specifications
+      description: Are there any transportation or technical standards this feature should comply with?
+      placeholder: "e.g., GTFS, GTFS-Realtime, OpenTripPlanner, SIRI, NeTEx"
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, references, or research about the feature request.
+      placeholder: Links to similar implementations, research papers, mockups, or other relevant information...
+
+  - type: checkboxes
+    id: research-alignment
+    attributes:
+      label: Research Alignment
+      description: Please confirm the following
+      options:
+        - label: This feature aligns with SIMOVI's mission of improving intelligent mobility systems
+          required: true
+        - label: I have searched existing issues to ensure this feature hasn't been requested already
+          required: true
+        - label: I understand this may require research and development time to implement
+          required: true

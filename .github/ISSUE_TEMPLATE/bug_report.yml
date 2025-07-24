@@ -1,0 +1,126 @@
+name: Bug Report
+description: Create a report to help us improve our transportation systems
+title: "[Bug]: "
+labels: ["bug", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug in our transportation information systems. Please fill out this form to help us understand and resolve the issue.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Tell us how to reproduce this bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Error Messages
+      description: If applicable, add screenshots or paste error messages to help explain your problem.
+      placeholder: Paste screenshots, error logs, or error messages here...
+
+  - type: dropdown
+    id: system-component
+    attributes:
+      label: System Component
+      description: Which SIMOVI system component is affected?
+      options:
+        - Databús (data collection and distribution)
+        - Infobús (information distribution)
+        - Mobile applications
+        - Web interfaces
+        - API services
+        - Data analysis tools
+        - GTFS tools
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: In which environment did this bug occur?
+      options:
+        - Production
+        - Development
+        - Testing
+        - Local setup
+        - Unknown
+    validations:
+      required: true
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating System
+      description: What operating system are you using?
+      placeholder: "e.g., Windows 11, macOS 14, Ubuntu 22.04, Android 13, iOS 17"
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser/Client Version
+      description: What browser or client application are you using?
+      placeholder: "e.g., Chrome 120, Safari 17, Firefox 119, Mobile App v2.1"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How severe is this bug?
+      options:
+        - Low - Minor issue, workaround available
+        - Medium - Affects functionality but not critical
+        - High - Breaks important functionality
+        - Critical - System unusable or data loss
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here, such as related issues, potential causes, or impact on transportation operations.
+      placeholder: Any additional information that might help us understand the problem...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Guidelines
+      description: Please confirm you've checked the following
+      options:
+        - label: I have searched existing issues to ensure this bug hasn't been reported already
+          required: true
+        - label: I have provided enough information for the development team to understand and reproduce the issue
+          required: true
+        - label: I understand this is for reporting software bugs, not for general support questions
+          required: true
