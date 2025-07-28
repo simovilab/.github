@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to report a bug in our transportation information systems. Please fill out this form to help us understand and resolve the issue.
+        Thank you for taking the time to report a bug in our transportation information systems at SIMOVI. Please fill out this form to help us understand and resolve the issue.
 
   - type: textarea
     id: bug-description
