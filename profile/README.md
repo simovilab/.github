@@ -6,9 +6,12 @@ _Intelligent Mobility Systems Lab_ (SIMOVI)
 
 > **SIMOVI** is a research laboratory dedicated to advancing intelligent mobility systems through digital technologies, data analytics, and information systems for public transportation. We focus on creating open, standards-based solutions that improve transit accessibility and operational efficiency.
 
-🗺️ **Please check the [SIMOVI Roadmap Overview](https://github.com/simovilab/context/blob/main/roadmap.md) (in English) to collaborate with our laboratory!**
+> [!NOTE]
+> 🗺️ Please check the [SIMOVI Roadmap Overview](https://github.com/simovilab/context/blob/main/roadmap.md) (in English) to collaborate with our laboratory!
 
 ## About us
+
+📚 | [🇨🇷 Español](#nuestro-trabajo) | [🇺🇸 English](#our-work) | [🇧🇷 Português](#nosso-trabalho)
 
 > [!IMPORTANT]
 > **Language Policy**: Most of our documentation is in English to support collaboration with developers around the world and to foster international partnerships in public transportation research. Whenever possible, documentation in Spanish and Portuguese will also be made available for audiences in Ibero-America.
@@ -16,8 +19,6 @@ _Intelligent Mobility Systems Lab_ (SIMOVI)
 > **Política de idiomas**: La mayoría de nuestra documentación está en inglés para apoyar la colaboración con desarrolladores de todo el mundo y fomentar las asociaciones internacionales en investigación del transporte público. Siempre que sea posible, también estará a disposición la documentación en español y portugués para audiencias en Iberoamérica.
 >
 > **Política de idiomas**: A maioria da nossa documentação está em inglês para apoiar a colaboração com desenvolvedores de todo o mundo e promover parcerias internacionais em pesquisa de transporte público. Sempre que possível, a documentação também será disponibilizada em espanhol e português para audiências na Ibero-América.
-
-📚 [🇨🇷 Español](#nuestro-trabajo) | [🇺🇸 English](#our-work) | [🇧🇷 Português](#nosso-trabalho)
 
 ### Our work
 
@@ -116,12 +117,14 @@ ADM <--> Content
 
 ```
 
-✏️ Check our [system design principles](https://github.com/simovilab/context/blob/main/system_design_principles.md) for further reference on this architecture.
+> [!NOTE]
+> 📐 Please check our [system design principles](https://github.com/simovilab/context/blob/main/system_design_principles.md) for further reference on this architecture.
+
+There are currently 18 repositories under development, described below.
 
 ## Databús
 
-> [!NOTE]
-> Databús&reg; is a registered trademark of the University of Costa Rica.
+Data collection and processing subsystem.
 
 ### Server
 
@@ -205,8 +208,7 @@ Operational mobile application for collecting tracking and telemetry data from p
 
 ## Infobús
 
-> [!NOTE]
-> Infobús&reg; is a registered trademark of the University of Costa Rica.
+Information distribution subsystem.
 
 ### Server
 
@@ -284,3 +286,6 @@ Panel for analysis of public transportation service data. Enables researchers an
 
 > [!NOTE]
 > TRL is an acronym for **Technology Readiness Level**. The levels range from 1 to 9, where 1 indicates basic research and 9 indicates that the technology is fully tested and ready for production use. You can check the [scale applied here](https://github.com/simovilab/context/blob/main/trl.md).
+
+> [!NOTE]
+> Databús&reg; and Infobús&reg; are registered trademarks of the University of Costa Rica.
