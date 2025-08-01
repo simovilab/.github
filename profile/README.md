@@ -124,7 +124,7 @@ There are currently 18 repositories under development, described below.
 
 ## Databús
 
-Data collection and processing subsystem.
+Data collection and processing subsystem for public transportation operations.
 
 ### Server
 
@@ -132,7 +132,7 @@ Data collection and processing subsystem.
 ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Server for collection, creation and distribution of public transportation service data. Enables management and distribution of static data (GTFS _Schedule_) and real-time data (GTFS _Realtime_). Exposes a REST API.
+Core backend server implementing GTFS Schedule and GTFS Realtime specifications for comprehensive transit data management. Provides RESTful API endpoints for static schedule data (routes, stops, trips) and real-time vehicle information (positions, alerts, service updates) with PostgreSQL/PostGIS storage and real-time data validation.
 
 ### Administration Panel
 
@@ -141,7 +141,7 @@ Server for collection, creation and distribution of public transportation servic
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Administration interface for the Databús server. Enables management of static and real-time data, as well as system configuration.
+Web-based administrative dashboard for transit operators to manage GTFS datasets, configure real-time feeds, monitor system health, and oversee data quality validation processes. Features role-based access control and operational metrics visualization.
 
 ### Content Management System
 
@@ -150,7 +150,7 @@ Administration interface for the Databús server. Enables management of static a
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Content management system for the Databús operational side. Enables management of content delivered through technical and administrative channels.
+Headless CMS for managing operational content including service alerts, system announcements, and technical documentation. Supports multilingual content creation with workflow management for transit authority communications and API-first content delivery.
 
 ### GTFS Editor
 
@@ -159,7 +159,7 @@ Content management system for the Databús operational side. Enables management 
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-low-555555)
 
-Editor for static public transportation service data, compatible with the **GTFS** _Schedule_ format. Enables creation and editing of routes, stops, schedules and other relevant data.
+Interactive web application for creating and editing GTFS Schedule datasets with visual map interface, route planning tools, stop management, and schedule optimization. Includes GTFS validation, export functionality, and collaborative editing capabilities for transit planning teams.
 
 ### Python Package
 
@@ -168,7 +168,7 @@ Editor for static public transportation service data, compatible with the **GTFS
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Package of utilities and tools and CLI (command line interface) for Python to interact with the Databús ecosystem and its data.
+Python SDK and command-line toolkit for GTFS data processing, validation, and analysis. Provides programmatic access to Databús APIs, GTFS manipulation utilities, data conversion tools, and automated testing frameworks for transit data workflows and research applications.
 
 ### Data Flow Orchestrator
 
@@ -177,7 +177,7 @@ Package of utilities and tools and CLI (command line interface) for Python to in
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Data flow management platform for real-time analysis and processing.
+Real-time data pipeline orchestration system using Apache Airflow for streaming vehicle positions, managing data transformations, and coordinating ETL processes.
 
 ### Stop Times Estimator
 
@@ -186,7 +186,7 @@ Data flow management platform for real-time analysis and processing.
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Arrival time estimation module based on historical data and time series prediction algorithms developed in-house.
+Machine learning service for predicting vehicle arrival times using historical GTFS data, real-time vehicle positions, and traffic patterns. Implements time series forecasting algorithms (LSTM, ARIMA) with continuous model retraining and heuristic search algorithms.
 
 ### Django App for GTFS Handling
 
@@ -195,7 +195,7 @@ Arrival time estimation module based on historical data and time series predicti
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Django application with utilities for database management and GTFS import/export, validation, and other related tasks.
+Reusable Django application providing GTFS data models, import/export utilities, validation services, and database optimization for transit applications. Features automated GTFS zip processing, data integrity checks, and ORM integration for rapid transit app development.
 
 ### Operational Mobile Application
 
@@ -204,11 +204,11 @@ Django application with utilities for database management and GTFS import/export
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Operational mobile application for collecting tracking and telemetry data from public transportation vehicles. Enables drivers to register events, such as trip start and end, alerts, and other relevant data.
+Cross-platform mobile application for bus drivers, trip dispatchers and fleet operators to collect real-time vehicle telemetry, GPS tracking, and operational events.
 
 ## Infobús
 
-Information distribution subsystem.
+Information distribution subsystem for passenger-facing services.
 
 ### Server
 
@@ -216,7 +216,7 @@ Information distribution subsystem.
 ![Static Badge](https://img.shields.io/badge/TRL-5-FFFF00)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Server for distribution of public transportation service information. Enables management and distribution of content for different interfaces, such as websites, mobile applications and screens.
+Multi-tenant information distribution platform consuming GTFS Schedule and Realtime, and other real-time data to deliver passenger information across multiple channels. Provides GraphQL and RESTful APIs for trip planning, stop information and real-time arrivals, among others.
 
 ### Administration Panel
 
@@ -225,7 +225,7 @@ Server for distribution of public transportation service information. Enables ma
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Administration interface for the Infobús server. Enables management of communication channels, as well as system configuration.
+Administrative interface for managing passenger information services, configuring display channels, monitoring system performance, and controlling content distribution across digital displays, websites, and mobile applications with analytics and usage reporting.
 
 ### Content Management System
 
@@ -233,7 +233,7 @@ Administration interface for the Infobús server. Enables management of communic
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-Content management system for the Infobús server. Enables creation and editing of content, such as news, alerts, and other relevant data for service users.
+Passenger-focused content management platform for creating and publishing transit information including service updates, emergency alerts, promotional content, and accessibility information. Features scheduled publishing, template management, and multi-channel content syndication.
 
 ### MCP Client / Server
 
@@ -241,7 +241,7 @@ Content management system for the Infobús server. Enables creation and editing 
 ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
 ![Static Badge](https://img.shields.io/badge/Priority-medium-AAAAAA)
 
-MCP (_Model Context Protocol_) server for interaction of artificial intelligence (AI) agents with the Infobús API, with application in chats with large language models (LLMs) and other AI systems.
+Model Context Protocol server enabling AI assistants and chatbots to access transit information through standardized interfaces. Provides tools for trip planning, real-time information queries, and natural language transit assistance with integration support for LLMs and conversational AI platforms.
 
 ### Python Package
 
@@ -250,7 +250,7 @@ MCP (_Model Context Protocol_) server for interaction of artificial intelligence
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Package of utilities and tools and CLI (command line interface) for Python to interact with the Infobús ecosystem and its data.
+Python client library and CLI tools for accessing Infobús APIs, building passenger information applications, and integrating transit data into research workflows. Includes trip planning algorithms, data visualization utilities, and automated testing frameworks for passenger information systems.
 
 ### Website
 
@@ -258,7 +258,7 @@ Package of utilities and tools and CLI (command line interface) for Python to in
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Website for querying public transportation service information. Enables users to query routes, schedules, alerts and other relevant data.
+Progressive web application providing comprehensive trip planning, real-time vehicle tracking, and stop information for transit passengers. Features responsive design, offline functionality, accessibility compliance (WCAG 2.1), and integration with mapping services for route visualization.
 
 ### Screen Server
 
@@ -266,7 +266,7 @@ Website for querying public transportation service information. Enables users to
 ![Static Badge](https://img.shields.io/badge/TRL-2-FF4400)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Content distribution server for informational screens. Enables management and distribution of specific content for screens located at stops, vehicles and other strategic points.
+Digital signage system for displaying real-time transit information on screens at bus stops, stations, and vehicles. Supports dynamic content layouts, remote configuration, offline resilience, and hardware integration with various display technologies and embedded systems.
 
 ### Mobile Application
 
@@ -274,7 +274,7 @@ Content distribution server for informational screens. Enables management and di
 ![Static Badge](https://img.shields.io/badge/TRL-1-FF0000)
 ![Static Badge](https://img.shields.io/badge/Priority-low-555555)
 
-Mobile application for querying public transportation service information. Enables users to query routes, schedules, alerts and other relevant data from their mobile devices.
+Native mobile application for iOS and Android providing personalized transit experience with trip planning, real-time notifications, favorite routes, accessibility features, and location-based services. Includes offline maps, push notifications for service disruptions, and user preference management.
 
 ### Data Analysis Panel
 
@@ -282,7 +282,7 @@ Mobile application for querying public transportation service information. Enabl
 ![Static Badge](https://img.shields.io/badge/TRL-3-FF8800)
 ![Static Badge](https://img.shields.io/badge/Priority-high-FFFFFF)
 
-Panel for analysis of public transportation service data. Enables researchers and analysts to query and visualize historical and real-time service data, facilitating informed decision-making.
+Business intelligence dashboard for transit agencies and researchers to analyze ridership patterns, service performance metrics, and operational efficiency. Features interactive visualizations, custom reporting, statistical analysis tools, and data export capabilities for evidence-based transit planning decisions.
 
 > [!NOTE]
 > TRL is an acronym for **Technology Readiness Level**. The levels range from 1 to 9, where 1 indicates basic research and 9 indicates that the technology is fully tested and ready for production use. You can check the [scale applied here](https://github.com/simovilab/context/blob/main/trl.md).
