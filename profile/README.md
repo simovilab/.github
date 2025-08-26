@@ -6,42 +6,44 @@ _Intelligent Mobility Systems Lab_ (SIMOVI)
 
 > **SIMOVI** is a research laboratory dedicated to advancing intelligent mobility systems through digital technologies, data analytics, and information systems for public transportation. We focus on creating open, standards-based solutions that improve transit accessibility and operational efficiency.
 
-> [!NOTE]
-> 🗺️ Please check the [SIMOVI Roadmap Overview](https://github.com/simovilab/context/blob/main/roadmap.md) (in English) to collaborate with our laboratory!
+For a quick orientation, see the [System Overview](#system-overview) below and explore these key documents to collaborate with our lab:
+
+- 🗺️ **Roadmap** — Project goals, milestones, and research directions ([read more](https://github.com/simovilab/context/blob/main/roadmap.md))
+- 🧩 **System Design Principles** — Architectural guidelines and best practices ([read more](https://github.com/simovilab/context/blob/main/system_design_principles.md))
+- 📊 **Data Principles** — Data management, quality, and interoperability standards ([read more](https://github.com/simovilab/context/blob/main/data_principles.md))
+- 🛠️ **Technology Stack** — Core technologies and tools used in our ecosystem ([read more](https://github.com/simovilab/context/blob/main/tech_stack.md))
+
+> [!IMPORTANT]
+> 🇺🇸 **Language Policy**: Most documentation is in English to support global collaboration and international research. Spanish and Portuguese versions are provided for Ibero-American audiences whenever possible.
+>
+> 🇨🇷 **Política de idiomas**: La mayor parte de la documentación está en inglés para facilitar la colaboración global e internacional. Siempre que sea posible, se ofrece en español y portugués para audiencias de Iberoamérica.
+>
+> 🇧🇷 **Política de idiomas**: A maior parte da documentação está em inglês para colaboração e pesquisa internacional. Espanhol e português disponíveis para a Ibero-América sempre que possível.
 
 ## About us
 
-📚 | [🇨🇷 Español](#nuestro-trabajo) | [🇺🇸 English](#our-work) | [🇧🇷 Português](#nosso-trabalho)
-
-> [!IMPORTANT]
-> **Language Policy**: Most of our documentation is in English to support collaboration with developers around the world and to foster international partnerships in public transportation research. Whenever possible, documentation in Spanish and Portuguese will also be made available for audiences in Ibero-America.
->
-> **Política de idiomas**: La mayoría de nuestra documentación está en inglés para apoyar la colaboración con desarrolladores de todo el mundo y fomentar las asociaciones internacionales en investigación del transporte público. Siempre que sea posible, también estará a disposición la documentación en español y portugués para audiencias en Iberoamérica.
->
-> **Política de idiomas**: A maioria da nossa documentação está em inglês para apoiar a colaboração com desenvolvedores de todo o mundo e promover parcerias internacionais em pesquisa de transporte público. Sempre que possível, a documentação também será disponibilizada em espanhol e português para audiências na Ibero-América.
-
-### Our work
+### 🇺🇸 Our work
 
 We investigate technologies for the analysis of public transportation data, with an emphasis on information systems for users. We are currently developing two complementary systems:
 
 - **Databús**: a platform for the collection, creation, and distribution of public transportation service data, including both static information such as routes, schedules, and maps, as well as alerts and real-time vehicle information.
 - **Infobús**: a service information distribution platform for bus users. It includes multiple digital media, such as screens, websites, and other components for making use of service data.
 
-### Nuestro trabajo
+### 🇨🇷 Nuestro trabajo
 
 Investigamos tecnologías para el análisis de datos del transporte público, con énfasis en sistemas de información para las personas usuarias. Actualmente desarrollamos dos sistemas complementarios:
 
 - **Databús**: una plataforma de _recolección_, _creación_ y _distribución_ de datos del servicio de transporte público, tanto la información estática de rutas, horarios, mapas y otros, como alertas y la información en tiempo real de los vehículos.
 - **Infobús**: una plataforma de _distribución_ de información del servicio para las personas usuarias del servicio de buses. Incluye múltiples medios digitales, como pantallas, sitios web y otros componentes para el uso de los datos del servicio.
 
-### Nosso trabalho
+### 🇧🇷 Nosso trabalho
 
 Investigamos tecnologias para a análise de dados do transporte público, com ênfase em sistemas de informação para as pessoas usuárias. Atualmente, estamos desenvolvendo dois sistemas complementares:
 
 - **Databús**: uma plataforma para _coleta_, _criação_ e _distribuição_ de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
 - **Infobús**: uma plataforma de _distribuição_ de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
 
-## System
+## System Overview
 
 The following technological architecture diagram illustrates the core components and data flows of our research and development ecosystem.
 
@@ -116,9 +118,6 @@ Operations <--> ADM
 ADM <--> Content
 
 ```
-
-> [!NOTE]
-> 📐 Please check our [system design principles](https://github.com/simovilab/context/blob/main/system_design_principles.md) for further reference on this architecture.
 
 There are currently 18 repositories under development, described below.
 
@@ -285,7 +284,7 @@ Native mobile application for iOS and Android providing personalized transit exp
 Business intelligence dashboard for transit agencies and researchers to analyze ridership patterns, service performance metrics, and operational efficiency. Features interactive visualizations, custom reporting, statistical analysis tools, and data export capabilities for evidence-based transit planning decisions.
 
 > [!NOTE]
-> TRL is an acronym for **Technology Readiness Level**. The levels range from 1 to 9, where 1 indicates basic research and 9 indicates that the technology is fully tested and ready for production use. You can check the [scale applied here](https://github.com/simovilab/context/blob/main/trl.md).
+> TRL is an acronym for **Technology Readiness Level**. The levels range from 1 to 9, where 1 indicates basic research and 9 indicates that the technology is fully tested and ready for production use. You can check the [applied scale here](https://github.com/simovilab/context/blob/main/trl.md).
 
 > [!NOTE]
 > Databús&reg; and Infobús&reg; are registered trademarks of the University of Costa Rica.
