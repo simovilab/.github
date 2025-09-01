@@ -2,7 +2,8 @@
 
 Welcome to the **Intelligent Mobility Systems Lab** (SIMOVI) at the University of Costa Rica! We appreciate your interest in contributing to our open-source public transportation research projects.
 
-> [!IMPORTANT] > **Research Context**: Our projects focus on intelligent mobility systems, public transportation data analysis, and GTFS-based solutions. All contributions should align with our mission of improving transit accessibility and operational efficiency through digital technologies.
+> [!IMPORTANT]
+> **Research Context**: Our projects focus on intelligent mobility systems, public transportation data analysis, and GTFS-based solutions. All contributions should align with our mission of improving transit accessibility and operational efficiency through digital technologies.
 
 ## Code of Conduct
 
@@ -14,10 +15,12 @@ By participating in this project, you agree to abide by our research ethics and 
 
 Before contributing, please:
 
-1. 📚 Read our [System Design Principles](https://github.com/simovilab/.github/blob/main/PRINCIPLES.md)
-2. 🗺️ Review the [SIMOVI Roadmap](https://github.com/simovilab/.github/blob/main/ROADMAP.md)
-3. 🏗️ Understand our system architecture in the [Organization Profile](https://github.com/simovilab/.github/blob/main/profile/README.md)
-4. 📊 Familiarize yourself with [Technology Readiness Levels](https://github.com/simovilab/.github/blob/main/TRL.md)
+1. 🗺️ Review the [SIMOVI Roadmap](https://github.com/simovilab/context/blob/main/roadmap.md)
+1. 📚 Read our [System Design Principles](https://github.com/simovilab/context/blob/main/system_design_principles.md)
+1. 📚 Read our [Data Principles](https://github.com/simovilab/context/blob/main/data_principles.md)
+1. 🚀 Familiarize yourself with our [Technology Stack](https://github.com/simovilab/context/blob/main/tech_stack.md).
+1. 🏗️ Understand our system architecture in the [Organization Profile](https://github.com/simovilab/.github/blob/main/profile/README.md)
+1. 📊 Familiarize yourself with [Technology Readiness Levels](https://github.com/simovilab/.github/blob/main/TRL.md)
 
 ### Development Environment
 
