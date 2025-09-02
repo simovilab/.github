@@ -8,10 +8,10 @@ _Intelligent Mobility Systems Lab_ (SIMOVI)
 
 For a quick orientation, see the [System Overview](#system-overview) below and explore these key documents to collaborate with our lab:
 
-- 🗺️ **Roadmap** — Project goals, milestones, and research directions ([read more](https://github.com/simovilab/context/blob/main/roadmap.md))
-- 🧩 **System Design Principles** — Architectural guidelines and best practices ([read more](https://github.com/simovilab/context/blob/main/system_design_principles.md))
-- 📊 **Data Principles** — Data management, quality, and interoperability standards ([read more](https://github.com/simovilab/context/blob/main/data_principles.md))
-- 🛠️ **Technology Stack** — Core technologies and tools used in our ecosystem ([read more](https://github.com/simovilab/context/blob/main/tech_stack.md))
+- **SIMOVI Public Roadmap** — Project goals, milestones, and research directions ([read more](https://github.com/orgs/simovilab/projects/2))
+- **System Design Principles** — Architectural guidelines and best practices ([read more](https://github.com/simovilab/context/blob/main/system_design_principles.md))
+- **Data Principles** — Data management and interoperability standards ([read more](https://github.com/simovilab/context/blob/main/data_principles.md))
+- **Technology Stack** — Core technologies and tools used in our ecosystem ([read more](https://github.com/simovilab/context/blob/main/tech_stack.md))
 
 > [!IMPORTANT]
 > 🇺🇸 **Language Policy**: Most documentation is in English to support global collaboration and international research. Spanish and Portuguese versions are provided for Ibero-American audiences whenever possible.
