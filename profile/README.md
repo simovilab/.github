@@ -13,12 +13,17 @@ For a quick orientation, see the [System Overview](#system-overview) below and e
 - **Data Principles** — Data management and interoperability standards ([read more](https://github.com/simovilab/context/blob/main/data_principles.md))
 - **Technology Stack** — Core technologies and tools used in our ecosystem ([read more](https://github.com/simovilab/context/blob/main/tech_stack.md))
 
-> [!IMPORTANT]
-> 🇺🇸 **Language Policy**: Most documentation is in English to support global collaboration and international research. Spanish and Portuguese versions are provided for Ibero-American audiences whenever possible.
->
-> 🇨🇷 **Política de idiomas**: La mayor parte de la documentación está en inglés para facilitar la colaboración global e internacional. Siempre que sea posible, se ofrece en español y portugués para audiencias de Iberoamérica.
->
-> 🇧🇷 **Política de idiomas**: A maior parte da documentação está em inglês para colaboração e pesquisa internacional. Espanhol e português disponíveis para a Ibero-América sempre que possível.
+### Contact Info
+
+**Fabián Abarca**
+<br>
+_Research Group Leader_
+<br>
+fabian.abarca@ucr.ac.cr
+|
+[GitHub](https://github.com/fabianabarca)
+|
+[Twitter](https://twitter.com/fabianabarca)
 
 ## About us
 
@@ -42,6 +47,13 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 
 - **Databús**: uma plataforma para _coleta_, _criação_ e _distribuição_ de dados do serviço de transporte público, incluindo tanto informações estáticas como rotas, horários e mapas, quanto alertas e informações em tempo real dos veículos.
 - **Infobús**: uma plataforma de _distribuição_ de informação do serviço para as pessoas usuárias de ônibus. Inclui diversos meios digitais, como telas, sites e outros componentes para o uso dos dados do serviço.
+
+> [!IMPORTANT]
+> 🇺🇸 **Language Policy**: Most documentation is in English to support global collaboration and international research. Spanish and Portuguese versions are provided for Ibero-American audiences whenever possible.
+>
+> 🇨🇷 **Política de idiomas**: La mayor parte de la documentación está en inglés para facilitar la colaboración global e internacional. Cuando sea posible estará disponible en español y portugués para audiencias de Iberoamérica.
+>
+> 🇧🇷 **Política de idiomas**: A maior parte da documentação está em inglês para colaboração e pesquisa internacional. Espanhol e português disponíveis para a Ibero-América sempre que possível.
 
 ## System Overview
 
