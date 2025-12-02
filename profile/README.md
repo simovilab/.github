@@ -55,6 +55,12 @@ Investigamos tecnologias para a análise de dados do transporte público, com ê
 >
 > 🇧🇷 **Política de idiomas**: A maior parte da documentação está em inglês para colaboração e pesquisa internacional. Espanhol e português disponíveis para a Ibero-América sempre que possível.
 
+## Memberships
+
+We are academic members of MobilityData, the organization behind the evolution of the General Transit Feed Specification (GTFS).
+
+<img src="https://github.com/user-attachments/assets/07f5c174-64b9-4b17-b3e3-128093c05018" width="150px" alt="MobilityData logo">
+
 ## System Overview
 
 The following technological architecture diagram illustrates the core components and data flows of our research and development ecosystem.
