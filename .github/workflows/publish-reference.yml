@@ -1,0 +1,138 @@
+name: Publish reference files
+
+on:
+  workflow_call:
+    inputs:
+      files:
+        description: "Newline-separated list of source:published_name pairs"
+        type: string
+        required: true
+      tag:
+        description: "Release tag to publish (defaults to the triggering release)"
+        type: string
+        required: false
+        default: ""
+      python_packages:
+        description: "Packages to pip install before validating"
+        type: string
+        required: false
+        default: ""
+      validate_cmd:
+        description: "Command run from the repository root of the tagged checkout"
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: publish-reference-${{ github.repository }}
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Resolve release
+        id: release
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+          EVENT_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          tag="${INPUT_TAG:-$EVENT_TAG}"
+          if ! [[ "$tag" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$ ]]; then
+            echo "::error::tag '$tag' is not a semantic version"
+            exit 1
+          fi
+          prerelease=$(gh api "repos/${{ github.repository }}/releases/tags/$tag" --jq .prerelease)
+          latest=$(gh api "repos/${{ github.repository }}/releases/latest" --jq .tag_name || true)
+          is_latest=false
+          if [ "$prerelease" = "false" ] && [ "$tag" = "$latest" ]; then
+            is_latest=true
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "is_latest=$is_latest" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: refs/tags/${{ steps.release.outputs.tag }}
+          path: src
+
+      - uses: actions/setup-python@v5
+        if: inputs.validate_cmd != ''
+        with:
+          python-version: "3.12"
+
+      - name: Validate
+        if: inputs.validate_cmd != ''
+        working-directory: src
+        env:
+          PACKAGES: ${{ inputs.python_packages }}
+          VALIDATE_CMD: ${{ inputs.validate_cmd }}
+        run: |
+          if [ -n "$PACKAGES" ]; then pip install $PACKAGES; fi
+          bash -c "$VALIDATE_CMD"
+
+      - name: Check whether the releases branch exists
+        id: branch
+        run: |
+          if git ls-remote --exit-code --heads "https://github.com/${{ github.repository }}.git" releases > /dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.branch.outputs.exists == 'true'
+        with:
+          ref: releases
+          path: out
+
+      - name: Initialize the releases branch
+        if: steps.branch.outputs.exists == 'false'
+        run: |
+          git init -b releases out
+          git -C out remote add origin "https://github.com/${{ github.repository }}.git"
+
+      - name: Copy files
+        env:
+          TAG: ${{ steps.release.outputs.tag }}
+          IS_LATEST: ${{ steps.release.outputs.is_latest }}
+          FILES: ${{ inputs.files }}
+        run: |
+          mkdir -p "out/versions/$TAG"
+          while IFS=: read -r source name; do
+            [ -z "$source" ] && continue
+            test -f "src/$source" || { echo "::error::missing $source"; exit 1; }
+            target="out/versions/$TAG/$name"
+            if [ -f "$target" ] && ! cmp -s "src/$source" "$target"; then
+              echo "::error::$target already exists with different content"
+              exit 1
+            fi
+            cp "src/$source" "$target"
+            if [ "$IS_LATEST" = "true" ]; then
+              cp "src/$source" "out/$name"
+            fi
+          done <<< "$FILES"
+          touch out/.nojekyll
+          versions=$(ls out/versions | sort -V | jq -R . | jq -s .)
+          latest=$(gh api "repos/${{ github.repository }}/releases/latest" --jq .tag_name || true)
+          jq -n --arg latest "$latest" --argjson versions "$versions" \
+            '{latest: $latest, versions: $versions}' > out/versions.json
+
+      - name: Commit and push
+        env:
+          TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          cd out
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to publish"
+            exit 0
+          fi
+          git commit -m "chore: publish reference files $TAG"
+          git push origin HEAD:releases
